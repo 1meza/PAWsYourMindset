@@ -1,6 +1,12 @@
 import { MongoClient, ServerApiVersion } from "mongodb";
 
 const uri = process.env.ATLAS_URI || "";
+
+if (!uri) {
+  console.error("ATLAS_URI is not set");
+  process.exit(1);
+}
+
 const client = new MongoClient(uri, {
   serverApi: {
     version: ServerApiVersion.v1,
@@ -21,6 +27,6 @@ try {
   console.error(err);
 }
 
-let db = client.db("employees");
+let db = client.db("PawsYourMindset");
 
 export default db;
