@@ -37,40 +37,47 @@ const Versus = () => {
         </div>
       </div>
 
-      {/* Brain SVGs with labels */}
-      <div className="flex justify-center items-center gap-10">
-                <div className="text-center">
-                <a href="#" className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 my-4">
-                <div className="flex flex-col items-center justify-center">
-                    {/* Replace FixedBrainSVG with your SVG component or an <img> tag */}
-                    
-                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Fixed Mindset</h5>
-                    <p className="text-center font-normal text-gray-700 dark:text-gray-400">
-                      <ul>
-                        <li>Complaints</li>
-                        <li>Blame</li>
-                        <li>Gives Up</li>
-                        <li>Excuses</li>
-                        <li>Externally driven</li>
-                      </ul></p>
-                </div>
-            </a>
-            <a href="#" className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 my-4">
-                <div className="flex flex-col items-center justify-center">
-                    {/* Replace GrowBrainSVG with your SVG component or an <img> tag */}
-                
-                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Growth Mindset</h5>
-                    <p className="text-center font-normal text-gray-700 dark:text-gray-400"><ul>
+      {/* Brain SVGs with VS label */}
+      <div className="flex justify-center items-center gap-20">
+                {/* Fixed Mindset Card */}
+                <a href="#" className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                    <div className="flex flex-col items-center justify-center">
+                        <img src={BrainFixed} alt="Fixed Mindset" className="h-40 w-40" />
+                        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Fixed Mindset</h5>
+                        <p className="font-normal text-gray-700 dark:text-gray-400">
+                        <ul>
                         <li>Accountability</li>
                         <li>Learning</li>
                         <li>Persistence</li>
                         <li>Ownership</li>
                         <li>Internally driven</li>
-                      </ul></p>
+                      </ul>
+                        </p>
+                    </div>
+                </a>
+
+                {/* VS Label */}
+                <div className="text-center text-4xl font-bold text-white">
+                    VS
                 </div>
-            </a>
-                </div>
-      </div>
+
+                {/* Growth Mindset Card */}
+                <a href="#" className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                    <div className="flex flex-col items-center justify-center">
+                        <img src={BrainGrowth} alt="Growth Mindset" className="h-40 w-40" />
+                        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Growth Mindset</h5>
+                        <p className="font-normal text-gray-700 dark:text-gray-400">
+                        <ul>
+                        <li>Complaints</li>
+                        <li>Blame</li>
+                        <li>Gives Up</li>
+                        <li>Excuses</li>
+                        <li>Externally driven</li>
+                      </ul>
+                        </p>
+                    </div>
+                </a>
+            </div>
     </div>
     </div>
     
