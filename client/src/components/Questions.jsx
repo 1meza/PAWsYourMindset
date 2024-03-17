@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom'
 import { useEffect } from 'react';
 
+
 const Card = ({ letter }) => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -34,19 +35,6 @@ const Card = ({ letter }) => {
 };
 
 const Questions = () => {
-
-const [questions, setQuestions] = useState([]);
-
-useEffect(() => {
-    // Replace the URL with your actual backend URL
-    fetch('https://pa-ws-your-mindset-backen.vercel.app/')
-        .then(response => response.json())
-        .then(data => setQuestions(data))
-        .catch(error => console.error('Error fetching data:', error));
-}, []); // Empty dependency array means this effect runs once on mount
-
-console.log(questions);
-
   return (
     <div className="fixed inset-0 flex flex-col items-center justify-center bg-orange-200">
         <div className="flex justify-between w-full px-4 absolute top-0">
@@ -79,14 +67,8 @@ console.log(questions);
       <div className="absolute top-32 w-full flex justify-center">
         <div className="max-w-sm rounded overflow-hidden shadow-lg border-2 border-black bg-white px-6 py-4">
             <div className="text-center text-bold font-bold"> 
-            { questions.map((question, index) => {
-                    return (
-                        <div key={index}>
-                            <h1>{question.question}</h1>
-                            <h2>{question.answer}</h2>
-                        </div>
-                    )
-                })}            
+                <h1 className="text-4xl">Question 1</h1>
+                <p className="text-2xl">How would you handle a mistake made by a team member that jeopardizes the success of a project?</p>
             </div>
         </div>
     </div>

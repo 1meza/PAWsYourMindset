@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 
+import BrainFixed from "../assets/brainfixed.svg";
+import BrainGrowth from "../assets/braingrow.svg";
 
 const Versus = () => {
     return (
@@ -34,8 +36,23 @@ const Versus = () => {
           </Link>
         </div>
       </div>
+
+      {/* Brain SVGs with labels */}
+      <div className="flex justify-center items-center gap-10">
+                <div className="text-center">
+                <div className="mb-2 text-large">Fixed</div> {/* Label below the brain */}
+                    <img src={BrainFixed} alt="Fixed Mindset" className="h-80 w-80" /> {/* Increased size */}
+                    
+                </div>
+                <div className="text-center">
+                <div className="mb-2 text-lg">Growth</div> {/* Label below the brain */}
+                    <img src={BrainGrowth} alt="Growth Mindset" className="h-80 w-80" /> {/* Increased size */}
+                </div>
+      </div>
     </div>
     </div>
+    
+
     );
 }
 
