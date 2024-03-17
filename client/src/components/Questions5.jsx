@@ -38,7 +38,7 @@ const Card = ({ letter }) => {
 
 const Questions5 = () => {
   return (
-    <div className="fixed inset-0 flex flex-col items-center justify-center bg-orange-200">
+    <div className="fixed inset-0 flex flex-col items-center justify-center  bg-blue-900">
         <div className="flex justify-between w-full px-4 absolute top-0">
         <div class="mx-auto flex items-center justify-center gap-10 px-6 py-5">
           <Link to="/">
