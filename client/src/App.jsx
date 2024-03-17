@@ -1,12 +1,15 @@
-import { Outlet } from "react-router-dom";
-import Navbar from "./components/Navbar";
+import React from 'react';
+import './App.css';
+import BarGraph from './BarGraph';
 
-const App = () => {
+function App() {
   return (
-    <div className="w-full p-6">
-      <Navbar />
-      <Outlet />
+    <div className="App">
+      <header className="App-header">
+        <BarGraph />
+      </header>
     </div>
   );
-};
-export default App
+}
+
+export default App;
