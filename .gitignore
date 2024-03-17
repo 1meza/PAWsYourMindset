@@ -1,0 +1,12 @@
+# Node module
+/node_modules
+
+# Environment Variables
+server/config.env
+
+.vscode
+
+# System Files
+.DS_Store
+
+
