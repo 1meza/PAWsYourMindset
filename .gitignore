@@ -1,6 +1,8 @@
 # Node module
 /node_modules
 
+server/node_modules
+
 # Environment Variables
 server/config.env
 
