@@ -7,14 +7,14 @@ const Card = ({ letter }) => {
 
   // Additional text for each card
   const additionalText = {
-    A: 'I would openly address the mistake with the team, take responsibility as the leader, and initiate a collaborative discussion to identify the root causes and potential solutions. By turning this setback into a learning opportunity, we can strengthen our teamwork and improve our processes for future projects.',
-    B: 'I would assign blame to the team member responsible for the mistake and publicly reprimand them to set an example for the rest of the team. This would ensure accountability and motivate others to be more careful in their work.',
-    C: 'I would downplay the significance of the mistake and continue with the project without addressing it directly. Its important to maintain morale and focus on the projects goals rather than dwelling on setbacks.',
-    D: 'I would delegate the task of fixing the mistake to someone else without involving the team. This way, we can avoid unnecessary stress and maintain productivity while ensuring that the project stays on track.'
+    A: 'I ignored the inefficiency in the process as addressing it seemed too time-consuming and disruptive. Instead, I continued with the existing system, hoping that things would eventually sort themselves out.',
+    B: 'I blamed others for the flaws in the system, believing that it was their responsibility to fix it. I avoided taking any action myself, assuming that someone else would step in to address the issue.',
+    C: 'I complained about the flaws in the process to my colleagues but didnt offer any constructive solutions. I felt frustrated with the inefficiencies but didnt feel empowered to initiate any changes.',
+    D: 'I balance perfection with the inevitability of mistakes by prioritizing excellence and learning from errors. For instance, when leading a product '
   };
 
   return (
-    <Link to="/Questions2" className="btn btn-primary">
+    <Link to="/Versus" className="btn btn-primary">
         <button
         className="cursor-pointer relative inline-block text-4xl group p-4 sm:p-8 md:p-12 lg:p-16"
         onMouseEnter={() => setIsHovered(true)}
@@ -36,7 +36,7 @@ const Card = ({ letter }) => {
   );
 };
 
-const Questions = () => {
+const Questions5 = () => {
   return (
     <div className="fixed inset-0 flex flex-col items-center justify-center bg-orange-200">
         <div className="flex justify-between w-full px-4 absolute top-0">
@@ -69,7 +69,7 @@ const Questions = () => {
       <div className="absolute top-32 w-full flex justify-center">
         <div className="max-w-sm rounded overflow-hidden shadow-lg border-2 border-black bg-white px-6 py-4">
             <div className="text-center text-bold font-bold"> 
-            Imagine you're leading a team project, and a significant mistake occurs that jeopardizes the project's success. How would you approach this situation, and how might you turn this mistake into an opportunity for the team's growth and improvement?
+            When working on a challenging task or project, how do you balance the need for perfection with the recognition that mistakes are inevitable? How would you provide an example of how you navigated this balance in the past?
             </div>
         </div>
     </div>
@@ -85,4 +85,4 @@ const Questions = () => {
   );
 };
 
-export default Questions;
+export default Questions5;
