@@ -13,15 +13,14 @@ PORT=5050
 Start server:
 ```
 cd mern/server
-npm install mongodb cors express
+npm install
 npm start
 ```
 
 Start Web server
 ```
 cd mern/client
-npm install tailwindcss postcss autoprefixer
-npm install -D react-router-dom
+npm install
 npm run dev
 ```
 
