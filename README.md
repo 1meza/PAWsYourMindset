@@ -14,7 +14,7 @@ Start server:
 ```
 cd mern/server
 npm install
-npm start
+node --env-file=config.env server
 ```
 
 Start Web server
