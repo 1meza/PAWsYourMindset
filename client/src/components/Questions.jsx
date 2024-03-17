@@ -1,5 +1,7 @@
 import React from 'react';
 
+
+
 const Card = ({ title, content }) => {
   return (
     <div className="max-w-sm m-4 rounded overflow-hidden border border-black border-solid bg-white">
@@ -12,12 +14,28 @@ const Card = ({ title, content }) => {
 };
 
 const Questions = () => {
+
+  const [questions, setQuestions] = useState([]);
+
+    useEffect(() => {
+        // Replace the URL with your actual backend URL
+        fetch('https://pa-ws-your-mindset-backen.vercel.app/PawsYourMindset/questions')
+            .then(response => response.json())
+            .then(data => setQuestions(data))
+            .catch(error => console.error('Error fetching data:', error));
+    }, []); // Empty dependency array means this effect runs once on mount
+  
   return (
     <div className="fixed inset-0 flex flex-col items-center justify-center bg-orange-200">
       <div className='absolute top-12 text-center'> 
         <div className='border border-black bg-white px-6 py-4'>
             <div className='text-center'> 
-                Question goes here
+                <h1 className='text-4xl font-bold'>Questions</h1>
+                {questions.map((question, index) => (
+                    <div key={index}>
+                        <h2>{question.question}</h2>
+                    </div>
+                ))}
             </div>
         </div>
       </div>
