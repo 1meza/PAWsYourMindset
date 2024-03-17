@@ -7,14 +7,14 @@ const Card = ({ letter }) => {
 
   // Additional text for each card
   const additionalText = {
-    A: 'I would openly address the mistake with the team, take responsibility as the leader, and initiate a collaborative discussion to identify the root causes and potential solutions. By turning this setback into a learning opportunity, we can strengthen our teamwork and improve our processes for future projects.',
-    B: 'I would assign blame to the team member responsible for the mistake and publicly reprimand them to set an example for the rest of the team. This would ensure accountability and motivate others to be more careful in their work.',
-    C: 'I would downplay the significance of the mistake and continue with the project without addressing it directly. Its important to maintain morale and focus on the projects goals rather than dwelling on setbacks.',
-    D: 'I would delegate the task of fixing the mistake to someone else without involving the team. This way, we can avoid unnecessary stress and maintain productivity while ensuring that the project stays on track.'
+    A: 'I respond to criticism by acknowledging it openly, reflecting on the feedback with an open mind, and identifying areas for growth. I view constructive criticism as an opportunity for self-improvement and strive to incorporate it into my work.',
+    B: 'I typically react defensively to criticism, dismissing it as unjust or unwarranted. I believe in my abilities and dont see the need to change my approach based on others opinions.',
+    C: 'I tend to avoid criticism altogether by surrounding myself with people who only offer positive feedback. I find that focusing on the positives enhances my confidence and motivation, allowing me to excel in my work without being weighed down by negativity.',
+    D: 'When faced with criticism, I usually become discouraged and lose confidence in my abilities. Its challenging for me to separate constructive feedback from personal attacks, which often leads to feelings of inadequacy.'
   };
 
   return (
-    <Link to="/Questions2" className="btn btn-primary">
+    <Link to="/Questions3" className="btn btn-primary">
         <button
         className="cursor-pointer relative inline-block text-4xl group p-4 sm:p-8 md:p-12 lg:p-16"
         onMouseEnter={() => setIsHovered(true)}
@@ -36,7 +36,7 @@ const Card = ({ letter }) => {
   );
 };
 
-const Questions = () => {
+const Questions2 = () => {
   return (
     <div className="fixed inset-0 flex flex-col items-center justify-center bg-orange-200">
         <div className="flex justify-between w-full px-4 absolute top-0">
@@ -69,7 +69,7 @@ const Questions = () => {
       <div className="absolute top-32 w-full flex justify-center">
         <div className="max-w-sm rounded overflow-hidden shadow-lg border-2 border-black bg-white px-6 py-4">
             <div className="text-center text-bold font-bold"> 
-            Imagine you're leading a team project, and a significant mistake occurs that jeopardizes the project's success. How would you approach this situation, and how might you turn this mistake into an opportunity for the team's growth and improvement?
+            Reflecting on a time when you've faced criticism or feedback about your work, how do you respond to it, and what did you learn from that experience?
             </div>
         </div>
     </div>
@@ -85,4 +85,4 @@ const Questions = () => {
   );
 };
 
-export default Questions;
+export default Questions2;

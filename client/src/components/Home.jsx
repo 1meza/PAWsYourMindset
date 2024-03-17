@@ -13,7 +13,7 @@ const Home = () => {
           <Link to="/">
             <ul class="bg-white border-gray-900 hover:border-zinc-300 hover:bg-gray-900 group flex-1 -skew-x-[30deg] transform border">
               <li class="m-4 skew-x-[30deg] transform bg-transparent px-9 text-center first-letter:uppercase">
-                <b class="block text-lg group-hover:text-white">TEST</b>
+                <b class="block text-lg group-hover:text-white">Home</b>
               </li>
             </ul>
           </Link>  

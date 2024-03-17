@@ -9,6 +9,10 @@ import Home from "./components/Home";
 import Questions from "./components/Questions"
 import Versus from "./components/Versus";
 import Team from "./components/Team";
+import Questions2 from "./components/Questions2";
+import Questions3 from "./components/Questions3";
+import Questions4 from "./components/Questions4";
+import Questions5 from "./components/Questions5";
 import "./index.css";
 
 const router = createBrowserRouter([
@@ -32,6 +36,22 @@ const router = createBrowserRouter([
   {
     path: "/Team",
     element: <Team />,
+  },
+  {
+    path: "/Questions2",
+    element: <Questions2 />,
+  },
+  {
+    path: "/Questions3",
+    element: <Questions3 />,
+  },
+  {
+    path: "/Questions4",
+    element: <Questions4 />,
+  },
+  {
+    path: "/Questions5",
+    element: <Questions5 />,
   },
   
   
