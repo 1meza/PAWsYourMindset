@@ -7,6 +7,8 @@ import {
 import App from "./App";
 import Home from "./components/Home";
 import Questions from "./components/Questions"
+import Versus from "./components/Versus";
+import Team from "./components/Team";
 import "./index.css";
 
 const router = createBrowserRouter([
@@ -23,6 +25,15 @@ const router = createBrowserRouter([
     path: "/Questions",
     element: <Questions />,
   },
+  {
+    path: "/Versus",
+    element: <Versus />,
+  },
+  {
+    path: "/Team",
+    element: <Team />,
+  },
+  
   
 ]);
 

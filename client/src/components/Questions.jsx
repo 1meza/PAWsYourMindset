@@ -1,15 +1,23 @@
 import React from 'react';
 
-
-
 const Card = ({ title, content }) => {
   return (
-    <div className="max-w-sm m-4 rounded overflow-hidden border border-black border-solid bg-white">
-      <div className="px-6 py-4">
-        <div className="font-bold text-xl mb-2">{title}</div>
-        <p className="text-gray-700 text-base mt-2">{content}</p>
+    <button
+      className="cursor-default relative inline-block text-4xl group p-4 sm:p-8 md:p-12 lg:p-16"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      style={{ pointerEvents: 'auto' }}
+    >
+      <div className="relative z-10 block px-16 py-8 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-4 border-gray-900 rounded-lg group-hover:text-black">
+        <div className="absolute inset-0 w-full h- px-16 py-8 rounded-lg bg-gray-50"></div>
+        <div className="absolute left-0 w-128 h-128 -ml-8 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-32 bg-gray-900 group-hover:-rotate-180 ease"></div>
+        <div className="relative">
+          {/* Conditionally render the additional text when hovered */}
+          {!isHovered && letter}
+          {isHovered && <div className="text-sm">{additionalText[letter]}</div>}
+        </div>
       </div>
-    </div>
+    </button>
   );
 };
 
@@ -30,21 +38,18 @@ const Questions = () => {
       <div className='absolute top-12 text-center'> 
         <div className='border border-black bg-white px-6 py-4'>
             <div className='text-center'> 
-                <h1 className='text-4xl font-bold'>Questions</h1>
-                {questions.map((question, index) => (
-                    <div key={index}>
-                        <h2>{question.question}</h2>
-                    </div>
-                ))}
+                Question goes here
             </div>
         </div>
-      </div>
-      <div className="flex flex-row">
-        <Card title="Card 1" content="Content for card 1." />
-        <Card title="Card 2" content="Content for card 2." />
-        <Card title="Card 3" content="Content for card 3." />
-        <Card title="Card 4" content="Content for card 4." />
-      </div>
+    </div>
+      <div className="flex justify-center items-end">
+        <div className="flex gap-4 mt-60">
+            <Card letter="A" />
+            <Card letter="B" />
+            <Card letter="C" />
+            <Card letter="D" />
+        </div>
+    </div>
     </div>
   );
 };
