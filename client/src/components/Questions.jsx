@@ -39,7 +39,7 @@ const [questions, setQuestions] = useState([]);
 
 useEffect(() => {
     // Replace the URL with your actual backend URL
-    fetch('https://pa-ws-your-mindset-backen.vercel.app/PawsYourMindset/questions')
+    fetch('https://pa-ws-your-mindset-backen.vercel.app/')
         .then(response => response.json())
         .then(data => setQuestions(data))
         .catch(error => console.error('Error fetching data:', error));
