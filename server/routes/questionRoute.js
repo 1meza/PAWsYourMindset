@@ -8,7 +8,24 @@ import db from "../db/connection.js";
 // MongoDB connection string - replace <password>, <dbname>, and other placeholders as necessary
 const mongoURI = process.env.ATLAS_URI || "";
 
-router.get('/', async (req, res) => {
+
+app.get('/', (req, res) => {
+    // This is the JSON object you want to send
+    const responseObject = {
+      message: "Welcome to our API",
+      info: "This API provides data on various topics.",
+      availableEndpoints: {
+        questions: "/PawsYourMindset/questions"
+      }
+    };
+  
+    // Sending the JSON response
+    res.json(responseObject);
+  });
+  
+
+
+router.get('/PawsYourMindset/questions', async (req, res) => {
     const client = new MongoClient(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true });
 
     try {
